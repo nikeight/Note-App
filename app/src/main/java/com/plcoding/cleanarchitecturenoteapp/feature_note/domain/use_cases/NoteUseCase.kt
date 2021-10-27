@@ -6,5 +6,6 @@ package com.plcoding.cleanarchitecturenoteapp.feature_note.domain.use_cases
  */
 data class NoteUseCase(
     val getNotesUseCase: GetNotesUseCase,
-    val deleteNoteUseCase: DeleteNoteUseCase
+    val deleteNoteUseCase: DeleteNoteUseCase,
+    val addNoteUseCase: AddNoteUseCase
 )
