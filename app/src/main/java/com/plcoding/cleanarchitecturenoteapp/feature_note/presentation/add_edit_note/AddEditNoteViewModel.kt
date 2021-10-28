@@ -13,9 +13,10 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 @HiltViewModel
-class AddEditNoteViewModel(
+class AddEditNoteViewModel @Inject constructor(
     private val noteUseCase: NoteUseCase,
     // This is generally provided by the hilt view model only
     // We can get the values directly from the savedStateHandle through navigation Component.

@@ -70,8 +70,7 @@ fun NoteScreen(
                 ) {
                     Icon(
                         imageVector = Icons.Default.Sort,
-                        contentDescription = "Sort Btn",
-                        tint = MaterialTheme.colors.surface
+                        contentDescription = "Sort Btn"
                     )
                 }
             }
