@@ -8,7 +8,7 @@ import com.plcoding.cleanarchitecturenoteapp.feature_note.domain.utils.OrderType
  * This is the data class to ge the state of the Notes only
  * (Not related to the UI)
  */
-data class NoteState(
+data class NotesState(
     val notes: List<Note> = emptyList(),
     val noteOrder: NoteOrder = NoteOrder.Date(OrderType.Descending),
     val isOrderSectionVisible: Boolean = false

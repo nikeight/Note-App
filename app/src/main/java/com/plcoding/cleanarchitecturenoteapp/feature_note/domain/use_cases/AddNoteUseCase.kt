@@ -6,7 +6,7 @@ import com.plcoding.cleanarchitecturenoteapp.feature_note.domain.repository.Note
 import kotlin.Throws
 
 /**
- * This class can be use to restore the note or add te=hem to db at the first place
+ * This class can be use to restore the note or add them to db at the first place
  */
 
 class AddNoteUseCase(

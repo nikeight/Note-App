@@ -51,16 +51,16 @@ fun AddEditNoteScreen(
 
     val scope = rememberCoroutineScope()
 
-    LaunchedEffect(key1 = true){
+    LaunchedEffect(key1 = true) {
         viewModel.eventFlow.collectLatest { event ->
-            when(event){
-                is UiEvent.SaveNote -> {
-                    navController.navigateUp()
-                }
+            when (event) {
                 is UiEvent.ShowSnackBar -> {
                     scaffoldState.snackbarHostState.showSnackbar(
-                        event.message
+                        message = event.message
                     )
+                }
+                is UiEvent.SaveNote -> {
+                    navController.navigateUp()
                 }
             }
         }

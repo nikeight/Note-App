@@ -52,8 +52,8 @@ class AddEditNoteViewModel @Inject constructor(
                             isHintVisible = false
                         )
 
-                        _noteContent.value = noteContent.value.copy(
-                            text = note.title,
+                        _noteContent.value = _noteContent.value.copy(
+                            text = note.content,
                             isHintVisible = false
                         )
 
@@ -87,13 +87,13 @@ class AddEditNoteViewModel @Inject constructor(
             }
 
             is AddEditNoteEvent.EnteredContent -> {
-                _noteContent.value = noteContent.value.copy(
+                _noteContent.value = _noteContent.value.copy(
                     text = event.value
                 )
             }
             is AddEditNoteEvent.ChangeContentFocus -> {
                 // Show hint when the text is blank and focused at the same time
-                _noteContent.value = noteContent.value.copy(
+                _noteContent.value = _noteContent.value.copy(
                     isHintVisible = !event.focusState.isFocused &&
                             noteContent.value.text.isBlank()
                 )

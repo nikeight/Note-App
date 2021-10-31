@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.map
 import java.util.concurrent.Flow
 
 /**
- * Use cases are repalceable
+ * Use cases are replaceable
  * Follow SOLID principle
  * Help us to maintain the code
  * and it increase readability of the code

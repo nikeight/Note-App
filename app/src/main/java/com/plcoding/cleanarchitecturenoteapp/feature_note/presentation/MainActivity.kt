@@ -21,8 +21,9 @@ import com.plcoding.cleanarchitecturenoteapp.ui.theme.CleanArchitectureNoteAppTh
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
+@ExperimentalAnimationApi
 class MainActivity : ComponentActivity() {
-    @ExperimentalAnimationApi
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
