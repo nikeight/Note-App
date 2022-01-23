@@ -43,7 +43,7 @@ fun NotesScreen(
             ) {
                 Icon(
                     imageVector = Icons.Default.Add,
-                    contentDescription = "Add notes"
+                    contentDescription = "Add"
                 )
             }
         }, scaffoldState = scaffoldState
