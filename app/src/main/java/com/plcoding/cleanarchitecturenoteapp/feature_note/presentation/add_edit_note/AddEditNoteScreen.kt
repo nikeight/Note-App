@@ -24,6 +24,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.plcoding.cleanarchitecturenoteapp.feature_note.domain.model.Note
 import com.plcoding.cleanarchitecturenoteapp.feature_note.presentation.add_edit_note.components.TransparentHintTextField
+import com.plcoding.cleanarchitecturenoteapp.util.TestTags
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
@@ -74,7 +75,7 @@ fun AddEditNoteScreen(
                 },
                 backgroundColor = MaterialTheme.colors.primary
             ) {
-                Icon(imageVector = Icons.Default.Save, contentDescription = "Save note")
+                Icon(imageVector = Icons.Default.Save, contentDescription = "Save")
             }
         },
         scaffoldState = scaffoldState
@@ -137,7 +138,9 @@ fun AddEditNoteScreen(
                 },
                 isHintVisible = titleState.isHintVisible,
                 singleLine = true,
-                textStyle = MaterialTheme.typography.h5
+                textStyle = MaterialTheme.typography.h5,
+                testTag = TestTags.TITLE_TEXT_FIELD
+
             )
 
             Spacer(modifier = Modifier.height(16.dp))
@@ -154,7 +157,8 @@ fun AddEditNoteScreen(
                 },
                 isHintVisible = contentState.isHintVisible,
                 textStyle = MaterialTheme.typography.body1,
-                modifier = Modifier.fillMaxHeight()
+                modifier = Modifier.fillMaxHeight(),
+                testTag = TestTags.CONTENT_TEXT_FIELD
             )
         }
     }

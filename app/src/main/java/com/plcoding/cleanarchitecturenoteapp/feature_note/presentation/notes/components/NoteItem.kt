@@ -17,11 +17,13 @@ import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.drawscope.clipPath
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.core.graphics.ColorUtils
 import com.plcoding.cleanarchitecturenoteapp.feature_note.domain.model.Note
+import com.plcoding.cleanarchitecturenoteapp.util.TestTags
 
 @Composable
 fun NoteItem(
@@ -33,6 +35,7 @@ fun NoteItem(
 ) {
     Box(
         modifier = modifier
+            .testTag(TestTags.NOTE_ITEM)
     ) {
         // matchParentSize is way different than fillmaxSize composable
         // As it is checked by its parent i.e Box
@@ -78,7 +81,7 @@ fun NoteItem(
                 color = MaterialTheme.colors.onSurface,
                 maxLines = 1,
                 // When title gets longer than expected
-                overflow = TextOverflow.Ellipsis
+                overflow = TextOverflow.Ellipsis,
             )
 
             Spacer(modifier = Modifier.height(8.dp))
