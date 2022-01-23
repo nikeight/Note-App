@@ -1,7 +1,7 @@
 package com.plcoding.cleanarchitecturenoteapp.feature_note.domain.use_cases
 
 import com.google.common.truth.Truth.assertThat
-import com.plcoding.cleanarchitecturenoteapp.feature_note.domain.data.repository.FakeRepository
+import com.plcoding.cleanarchitecturenoteapp.feature_note.data.repository.FakeRepository
 import com.plcoding.cleanarchitecturenoteapp.feature_note.domain.model.Note
 import com.plcoding.cleanarchitecturenoteapp.feature_note.domain.utils.NoteOrder
 import com.plcoding.cleanarchitecturenoteapp.feature_note.domain.utils.OrderType

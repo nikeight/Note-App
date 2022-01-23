@@ -1,4 +1,4 @@
-package com.plcoding.cleanarchitecturenoteapp.feature_note.domain.data.repository
+package com.plcoding.cleanarchitecturenoteapp.feature_note.data.repository
 
 import com.plcoding.cleanarchitecturenoteapp.feature_note.domain.model.Note
 import com.plcoding.cleanarchitecturenoteapp.feature_note.domain.repository.NoteRepository
